@@ -1,0 +1,29 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Animator))]
+public class AnimacaoPersonagem : MonoBehaviour 
+{
+	private Animator animator;
+
+	void Start()
+	{
+		animator = GetComponent<Animator>();
+	}
+
+	public void AnimacaoMovimento (Vector3 direcao)
+	{
+		animator.SetFloat("Movendo", direcao.magnitude);
+	} 		
+
+	public void Atacar (bool estado)
+	{
+		animator.SetBool("Atacando", estado);
+	}
+
+	public void Morte ()
+	{
+		animator.SetTrigger("Morte");
+	}
+}

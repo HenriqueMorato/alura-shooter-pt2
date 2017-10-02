@@ -1,24 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(MovimentoJogador))]
 public class ControlaJogador : MonoBehaviour
 {
-
-    public float Velocidade = 10;
     private Vector3 direcao;
     public LayerMask MascaraChao;
     public GameObject TextoGameOver;
-    public bool Vivo = true;
-    private Rigidbody rigidbodyJogador;
-    private Animator animatorJogador;
-
+    private AnimacaoPersonagem animacaoPersonagem;
+    private MovimentoJogador movimentoJogador;
+    [HideInInspector]
+    public Status status;
     private void Start()
     {
-        Time.timeScale = 1;
-        rigidbodyJogador = GetComponent<Rigidbody>();
-        animatorJogador = GetComponent<Animator>();
+        movimentoJogador = GetComponent<MovimentoJogador>();
+        animacaoPersonagem = GetComponent<AnimacaoPersonagem>();
+        status = GetComponent<Status>();
     }
 
     // Update is called once per frame
@@ -30,44 +28,23 @@ public class ControlaJogador : MonoBehaviour
 
         direcao = new Vector3(eixoX, 0, eixoZ);
 
-        if (direcao != Vector3.zero)
-        {
-            animatorJogador.SetBool("Movendo", true);
-        }
-        else
-        {
-            animatorJogador.SetBool("Movendo", false);
-        }
-
-        if(Vivo == false)
-        {
-            if(Input.GetButtonDown("Fire1"))
-            {
-                SceneManager.LoadScene("game");
-            }
-        }
+        animacaoPersonagem.AnimacaoMovimento (direcao);
     }
 
     void FixedUpdate()
     {
-        rigidbodyJogador.MovePosition
-            (rigidbodyJogador.position +
-            (direcao * Velocidade * Time.deltaTime));
+        movimentoJogador.Movimentacao(direcao, status.Velocidade);
 
-        Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(raio.origin, raio.direction * 100, Color.red);
+        movimentoJogador.RotacaoJogador(MascaraChao);
+    }
 
-        RaycastHit impacto;
-
-        if(Physics.Raycast(raio, out impacto, 100, MascaraChao))
+    public void TomarDano (int dano)
+    {
+        status.Vida -= dano;
+        ControlaJogo.instancia.AtualizaSliderVidaJogador();
+        if(status.Vida <= 0)
         {
-            Vector3 posicaoMiraJogador = impacto.point - transform.position;
-
-            posicaoMiraJogador.y = transform.position.y;
-
-            Quaternion novaRotacao = Quaternion.LookRotation(posicaoMiraJogador);
-
-            rigidbodyJogador.MoveRotation(novaRotacao);
+            ControlaJogo.instancia.GameOver();
         }
     }
 }

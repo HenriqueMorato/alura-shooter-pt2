@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4947205026216590}
   - component: {fileID: 33595895575024930}
   - component: {fileID: 23004761483656994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Concreto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,13 +34,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1163550317593264}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -19.91, y: -0.07, z: 19.93}
+  m_LocalScale: {x: 2.021752, y: 1, z: 1.703659}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &23004761483656994
 MeshRenderer:
   m_ObjectHideFlags: 1

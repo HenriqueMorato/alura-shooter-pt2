@@ -116,8 +116,11 @@ GameObject:
   - component: {fileID: 4941635705825534}
   - component: {fileID: 136079381028039656}
   - component: {fileID: 95175694969816346}
+  - component: {fileID: 114333030685116056}
   - component: {fileID: 114480877788707542}
   - component: {fileID: 54163392757231022}
+  - component: {fileID: 114353155711196302}
+  - component: {fileID: 114178808099082600}
   m_Layer: 0
   m_Name: Zumbi
   m_TagString: Inimigo
@@ -1388,7 +1391,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!95 &95175694969816346
 Animator:
@@ -1407,6 +1410,41 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114178808099082600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063500868937916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa1522f8a2854b1a87c8f49fc19cd1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114333030685116056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063500868937916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17fb743c5a346e59b6a657e40a08ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vida: 100
+  Velocidade: 5
+--- !u!114 &114353155711196302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063500868937916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d65df1215fb4f60826eaae77c0f5f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114480877788707542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1418,8 +1456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59eabf864c8a857479298ebeae16c339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Jogador: {fileID: 0}
-  Velocidade: 5
 --- !u!136 &136079381028039656
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -24,8 +24,8 @@ public class Bala : MonoBehaviour {
     {
         if(objetoDeColisao.tag == "Inimigo")
         {
-            Destroy(objetoDeColisao.gameObject, 1f);
-			objetoDeColisao.enabled = false;
+            objetoDeColisao.GetComponent<ControlaInimigo>().MorteZumbi();
+            ControlaJogo.instancia.MorteZumbiInterface();
 			GameObject particula = Instantiate(SangueZumbi, transform.position, objetoDeColisao.transform.rotation);
 			Destroy(particula, 1f);
         }
