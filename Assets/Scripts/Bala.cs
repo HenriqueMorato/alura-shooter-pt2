@@ -22,12 +22,15 @@ public class Bala : MonoBehaviour {
 
     void OnTriggerEnter(Collider objetoDeColisao)
     {
-        if(objetoDeColisao.tag == "Inimigo")
+        if(objetoDeColisao.tag == Tags.Inimigo)
         {
             objetoDeColisao.GetComponent<ControlaInimigo>().MorteZumbi();
-            ControlaJogo.instancia.MorteZumbiInterface();
 			GameObject particula = Instantiate(SangueZumbi, transform.position, objetoDeColisao.transform.rotation);
 			Destroy(particula, 1f);
+        }
+        else if(objetoDeColisao.tag == Tags.Chefe)
+        {
+            objetoDeColisao.GetComponent<ControlaBoss>().TomarDano(10);
         }
 
         Destroy(gameObject);

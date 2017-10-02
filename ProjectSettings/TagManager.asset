@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Inimigo
   - Jogador
+  - ChefeDeFase
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - 
   - 
   - Chao
-  - 
-  - 
+  - Inimigo
+  - Cenario
   - 
   - 
   - 

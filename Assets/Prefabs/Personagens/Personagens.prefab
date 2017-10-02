@@ -1725,8 +1725,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   TextoGameOver: {fileID: 0}
-  Vivo: 1
   status: {fileID: 0}
+  SomDano: {fileID: 0}
 --- !u!114 &114240463659201816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1740,6 +1740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bala: {fileID: 1826845318185780, guid: 4771099cc18cb6146b3ba07b97b26e9c, type: 2}
   CanoDaArma: {fileID: 1267256627637108}
+  SomTiro: {fileID: 0}
 --- !u!114 &114516573460289672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1751,8 +1752,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17fb743c5a346e59b6a657e40a08ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VidaInicial: 100
   Vida: 100
   Velocidade: 10
+  DistanciaDeVisao: 15
 --- !u!114 &114626650354636784
 MonoBehaviour:
   m_ObjectHideFlags: 1

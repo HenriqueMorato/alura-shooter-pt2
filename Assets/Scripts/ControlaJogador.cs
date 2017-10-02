@@ -12,6 +12,8 @@ public class ControlaJogador : MonoBehaviour
     private MovimentoJogador movimentoJogador;
     [HideInInspector]
     public Status status;
+    public AudioClip SomDano;
+
     private void Start()
     {
         movimentoJogador = GetComponent<MovimentoJogador>();
@@ -41,10 +43,21 @@ public class ControlaJogador : MonoBehaviour
     public void TomarDano (int dano)
     {
         status.Vida -= dano;
+        ControlaAudio.instancia.PlayOneShot(SomDano);
         ControlaJogo.instancia.AtualizaSliderVidaJogador();
         if(status.Vida <= 0)
         {
             ControlaJogo.instancia.GameOver();
         }
+    }
+
+    public void RecuperarVida (int vida)
+    {
+        status.Vida += vida;
+        if(status.Vida > status.VidaInicial)
+        {
+            status.Vida = status.VidaInicial;
+        }
+        ControlaJogo.instancia.AtualizaSliderVidaJogador();        
     }
 }

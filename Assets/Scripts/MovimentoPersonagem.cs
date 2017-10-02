@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovimentoPersonagem : MonoBehaviour {
 
 	protected Rigidbody rigidbodyJogador;
-    protected virtual void Start()
+    protected void Awake()
     {
         rigidbodyJogador = GetComponent<Rigidbody>();
     }
@@ -17,14 +17,16 @@ public class MovimentoPersonagem : MonoBehaviour {
             (direcao * velocidade * Time.deltaTime));
 	}
 
-    public void Rotacao (Quaternion rotacao)
+    public void Rotacao (Vector3 direcao)
     {
-        rigidbodyJogador.MoveRotation(rotacao);
+        Quaternion novaRotacao = Quaternion.LookRotation(direcao);
+        rigidbodyJogador.MoveRotation(novaRotacao);
     }
 
     public void CairPeloChao ()
     {
         rigidbodyJogador.constraints = RigidbodyConstraints.None;
+        rigidbodyJogador.velocity = Vector3.zero;
         GetComponent<Collider>().enabled = false;
     }
 }

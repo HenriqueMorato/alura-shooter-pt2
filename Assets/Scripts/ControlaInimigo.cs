@@ -14,15 +14,19 @@ public class ControlaInimigo : MonoBehaviour {
     private Vector3 direcao;
     private float tempoDaProximaMovimentacao = 4;
     private float contadorVagar;
-
+    [HideInInspector]
+    public GeradorZumbis meuGerador;
+    public GameObject KitMedico;
+    public AudioClip SomMorte;
+    
 	// Use this for initialization
 	void Start () {
-        Jogador = GameObject.FindWithTag("Jogador");
-        status = GetComponent<Status>();
+        Jogador = GameObject.FindWithTag(Tags.Jogador);
         movimentoPersonagem = GetComponent<MovimentoPersonagem>();
+        status = GetComponent<Status>();
         animacaoPersonagem = GetComponent<AnimacaoPersonagem>();
 
-        AleatoriaTipoZumbi();
+        AleatorizaTipoZumbi();
     }
 
     void FixedUpdate()
@@ -30,16 +34,14 @@ public class ControlaInimigo : MonoBehaviour {
         float distancia = Vector3.Distance(transform.position, Jogador.transform.position);
 
 
-        Quaternion novaRotacao = Quaternion.LookRotation(direcao);
-        movimentoPersonagem.Rotacao(novaRotacao);
-
+        movimentoPersonagem.Rotacao(direcao);
+	    animacaoPersonagem.AnimacaoMovimento(direcao);        
         if(distancia > status.DistanciaDeVisao)
         {
             Vagar();
         }
         else if (distancia > 2.5)
-        {
-            
+        {  
             direcao = Jogador.transform.position - transform.position;            
 
             movimentoPersonagem.Movimentacao(direcao.normalized, status.Velocidade);
@@ -55,14 +57,13 @@ public class ControlaInimigo : MonoBehaviour {
     void Vagar ()
     {
         
-        if(Time.time > contadorVagar)
+        if(Time.timeSinceLevelLoad > contadorVagar)
         {
             posicaoAleatoria = transform.position + (Random.insideUnitSphere * 10);
             posicaoAleatoria.y = 0f;
-            contadorVagar = Time.time + tempoDaProximaMovimentacao;
+            contadorVagar = Time.timeSinceLevelLoad + tempoDaProximaMovimentacao;
         }
 
-	    animacaoPersonagem.AnimacaoMovimento(direcao);
 
         if(Vector3.Distance(transform.position, posicaoAleatoria) >= 0.05f)
 		{
@@ -80,12 +81,21 @@ public class ControlaInimigo : MonoBehaviour {
     {
         movimentoPersonagem.CairPeloChao();
         animacaoPersonagem.Morte();
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 12);
         movimentoPersonagem.enabled = false;
         this.enabled = false;
+        meuGerador.DiminuiQtdZumbis();
+        ControlaAudio.instancia.PlayOneShot(SomMorte);
+        ControlaJogo.instancia.MorteZumbiInterface();
+
+        if(Random.value < 0.1)
+        {
+            GameObject kitMedico = Instantiate(KitMedico, transform.position, Quaternion.identity) as GameObject;
+            Destroy(kitMedico, 5);
+        }
     }
 
-    void AleatoriaTipoZumbi ()
+    void AleatorizaTipoZumbi ()
     {
         int geraTipoZumbi = Random.Range(1, transform.childCount);
         transform.GetChild(geraTipoZumbi).gameObject.SetActive(true);

@@ -51,18 +51,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GeradorChefe.cs" />
      <Compile Include="Assets\Scripts\AnimacaoPersonagem.cs" />
      <Compile Include="Assets\Scripts\Bala.cs" />
+     <Compile Include="Assets\Scripts\Billboard.cs" />
      <Compile Include="Assets\Scripts\ControlaArma.cs" />
+     <Compile Include="Assets\Scripts\ControlaAudio.cs" />
+     <Compile Include="Assets\Scripts\ControlaBoss.cs" />
      <Compile Include="Assets\Scripts\ControlaCamera.cs" />
      <Compile Include="Assets\Scripts\ControlaInimigo.cs" />
      <Compile Include="Assets\Scripts\ControlaJogador.cs" />
      <Compile Include="Assets\Scripts\ControlaJogo.cs" />
      <Compile Include="Assets\Scripts\EstadosInimigo.cs" />
      <Compile Include="Assets\Scripts\GeradorZumbis.cs" />
+     <Compile Include="Assets\Scripts\KitPrimeirosSocorros.cs" />
      <Compile Include="Assets\Scripts\MovimentoJogador.cs" />
      <Compile Include="Assets\Scripts\MovimentoPersonagem.cs" />
      <Compile Include="Assets\Scripts\Status.cs" />
+     <Compile Include="Assets\Scripts\Tags.cs" />
      <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes.txt" />
      <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes_Zumbi.txt" />
  <Reference Include="UnityEngine.UI">

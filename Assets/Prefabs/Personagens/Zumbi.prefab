@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4355340092236374}
   - component: {fileID: 137487306877820174}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Piloto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4322183746729112}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UpperArm_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4302903414223482}
   - component: {fileID: 137295640651392912}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_JogadorBasket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4491922655188208}
   - component: {fileID: 137690868211621516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Gangster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4457678887802532}
   - component: {fileID: 137851632641098030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Bombeiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4682162313652456}
   - component: {fileID: 137375219811447884}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_JogadorDeFutebol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,14 +114,15 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4941635705825534}
-  - component: {fileID: 136079381028039656}
   - component: {fileID: 95175694969816346}
-  - component: {fileID: 114333030685116056}
-  - component: {fileID: 114480877788707542}
+  - component: {fileID: 136079381028039656}
   - component: {fileID: 54163392757231022}
+  - component: {fileID: 114333030685116056}
   - component: {fileID: 114353155711196302}
   - component: {fileID: 114178808099082600}
-  m_Layer: 0
+  - component: {fileID: 114480877788707542}
+  - component: {fileID: 208435712873054044}
+  m_Layer: 9
   m_Name: Zumbi
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
@@ -136,7 +137,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4159956656330372}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hat_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +152,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4016398349323206}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LowerArm_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +167,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4388769296639126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UpperLeg_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4779154419103998}
   - component: {fileID: 137029562838365382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_TrabalhadorEstrada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +198,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4991665432160622}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hand_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4316805634493818}
   - component: {fileID: 137687714703205158}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Soldado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4071918280824158}
   - component: {fileID: 137207122150693120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_AtendenteLoja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +245,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4833387832597680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4497124155449878}
   - component: {fileID: 137370930249771558}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_CarregadorDeMalas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4075272846132962}
   - component: {fileID: 137580488633840332}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Avo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4729257623563424}
   - component: {fileID: 137967736789789780}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_SegurancaAeroporto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4586264802888212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hips_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +323,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4085197220006802}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4894430088770208}
   - component: {fileID: 137200785187879148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Mecanico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +354,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4145740658659914}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Foot_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +369,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4388596583815700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Root_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4222631928099660}
   - component: {fileID: 137019152055662498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_ControleAeroporto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +400,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4031022039527276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LowerArm_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,24 +416,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4064722041097342}
   - component: {fileID: 137156204888439918}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_MulherFazendeira
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!1 &1504810720375712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4207819667558592}
-  - component: {fileID: 137497243095129430}
-  m_Layer: 0
-  m_Name: Zumbi_PapaiNoel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,7 +431,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4827467465036434}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UpperLeg_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +446,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4377242333908618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UpperArm_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4893012492207234}
   - component: {fileID: 137640400166319804}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Turista
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4334187336593222}
   - component: {fileID: 137218795868932902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Ladrao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +493,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4962514885412186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LowerLeg_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +508,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4634032008162064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +523,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4134477478833348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LowerLeg_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4372706373884826}
   - component: {fileID: 137444823490201462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Corredor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4501434650456202}
   - component: {fileID: 137072189268836032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Industrial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +570,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4810169528331540}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hand_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4738148713945608}
   - component: {fileID: 137783145351736224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_MoradorDeAreaLivre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,7 +602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4877770179319214}
   - component: {fileID: 137613135818791924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_LiderDeTorcida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4907605347408658}
   - component: {fileID: 137097403606559408}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Caminhoneiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4218382938915208}
   - component: {fileID: 137862926859170400}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_PoliciaMontada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4006207165828770}
   - component: {fileID: 137541216947873484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Prisioneiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +665,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4404746216630624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Foot_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -696,7 +681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4623211769240938}
   - component: {fileID: 137825906876683472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Fazendeiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,24 +697,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4988906051635322}
   - component: {fileID: 137240459964344322}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zumbi_Executivo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!1 &1990239385627402
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4140055243868852}
-  - component: {fileID: 137122665053197402}
-  m_Layer: 0
-  m_Name: Zumbi_Palhaco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,7 +715,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4016398349323206
 Transform:
@@ -787,7 +756,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4071918280824158
 Transform:
@@ -800,7 +769,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4075272846132962
 Transform:
@@ -813,7 +782,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4085197220006802
 Transform:
@@ -843,19 +812,6 @@ Transform:
   m_Father: {fileID: 4827467465036434}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4140055243868852
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1990239385627402}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4145740658659914
 Transform:
   m_ObjectHideFlags: 1
@@ -882,19 +838,6 @@ Transform:
   m_Father: {fileID: 4085197220006802}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4207819667558592
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1504810720375712}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4218382938915208
 Transform:
   m_ObjectHideFlags: 1
@@ -906,7 +849,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4222631928099660
 Transform:
@@ -932,7 +875,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 25
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4316805634493818
 Transform:
@@ -945,7 +888,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 24
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4322183746729112
 Transform:
@@ -972,7 +915,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4355340092236374
 Transform:
@@ -985,7 +928,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4372706373884826
 Transform:
@@ -998,7 +941,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4377242333908618
 Transform:
@@ -1066,7 +1009,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4491922655188208
 Transform:
@@ -1079,7 +1022,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4497124155449878
 Transform:
@@ -1105,7 +1048,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4586264802888212
 Transform:
@@ -1134,7 +1077,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4634032008162064
 Transform:
@@ -1161,7 +1104,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4729257623563424
 Transform:
@@ -1187,7 +1130,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4779154419103998
 Transform:
@@ -1200,7 +1143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4810169528331540
 Transform:
@@ -1269,7 +1212,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 26
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4894430088770208
 Transform:
@@ -1282,7 +1225,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4907605347408658
 Transform:
@@ -1295,7 +1238,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4941635705825534}
-  m_RootOrder: 27
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4941635705825534
 Transform:
@@ -1313,7 +1256,6 @@ Transform:
   - {fileID: 4497124155449878}
   - {fileID: 4988906051635322}
   - {fileID: 4877770179319214}
-  - {fileID: 4140055243868852}
   - {fileID: 4623211769240938}
   - {fileID: 4064722041097342}
   - {fileID: 4457678887802532}
@@ -1329,7 +1271,6 @@ Transform:
   - {fileID: 4779154419103998}
   - {fileID: 4334187336593222}
   - {fileID: 4372706373884826}
-  - {fileID: 4207819667558592}
   - {fileID: 4071918280824158}
   - {fileID: 4316805634493818}
   - {fileID: 4302903414223482}
@@ -1432,8 +1373,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17fb743c5a346e59b6a657e40a08ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VidaInicial: 100
   Vida: 100
   Velocidade: 5
+  DistanciaDeVisao: 15
 --- !u!114 &114353155711196302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1456,6 +1399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59eabf864c8a857479298ebeae16c339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meuGerador: {fileID: 0}
+  KitMedico: {fileID: 1060151288946202, guid: 6150c6f66b7034ec5b3672478195682a, type: 2}
+  SomMorte: {fileID: 8300000, guid: 56dac1a77e8b2405797ed658008cf72a, type: 3}
 --- !u!136 &136079381028039656
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1716,68 +1662,6 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0.0000017285347, y: 1.5068603, z: 0.11944562}
     m_Extent: {x: 1.6845055, y: 1.5068605, z: 0.6169559}
-  m_DirtyAABB: 0
---- !u!137 &137122665053197402
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1990239385627402}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: a4e0e781815064b4db59980b78af2175, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300010, guid: dbbc53a6bc8f5c64bb234194ce1380aa, type: 3}
-  m_Bones:
-  - {fileID: 4388596583815700}
-  - {fileID: 4586264802888212}
-  - {fileID: 4827467465036434}
-  - {fileID: 4134477478833348}
-  - {fileID: 4145740658659914}
-  - {fileID: 4388769296639126}
-  - {fileID: 4962514885412186}
-  - {fileID: 4404746216630624}
-  - {fileID: 4634032008162064}
-  - {fileID: 4833387832597680}
-  - {fileID: 4085197220006802}
-  - {fileID: 4159956656330372}
-  - {fileID: 4377242333908618}
-  - {fileID: 4031022039527276}
-  - {fileID: 4810169528331540}
-  - {fileID: 4322183746729112}
-  - {fileID: 4016398349323206}
-  - {fileID: 4991665432160622}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 4388596583815700}
-  m_AABB:
-    m_Center: {x: 0.0000017285347, y: 1.6967441, z: 0.01531902}
-    m_Extent: {x: 1.6845055, y: 1.1302162, z: 0.4270743}
   m_DirtyAABB: 0
 --- !u!137 &137156204888439918
 SkinnedMeshRenderer:
@@ -2398,68 +2282,6 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0.0000017285347, y: 1.5633721, z: 0.0064869523}
     m_Extent: {x: 1.6845055, y: 1.5633724, z: 0.59226257}
-  m_DirtyAABB: 0
---- !u!137 &137497243095129430
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1504810720375712}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 81e9636b7e1fc8b45bcd58639405eea4, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300044, guid: dbbc53a6bc8f5c64bb234194ce1380aa, type: 3}
-  m_Bones:
-  - {fileID: 4388596583815700}
-  - {fileID: 4586264802888212}
-  - {fileID: 4827467465036434}
-  - {fileID: 4134477478833348}
-  - {fileID: 4145740658659914}
-  - {fileID: 4388769296639126}
-  - {fileID: 4962514885412186}
-  - {fileID: 4404746216630624}
-  - {fileID: 4634032008162064}
-  - {fileID: 4833387832597680}
-  - {fileID: 4085197220006802}
-  - {fileID: 4159956656330372}
-  - {fileID: 4377242333908618}
-  - {fileID: 4031022039527276}
-  - {fileID: 4810169528331540}
-  - {fileID: 4322183746729112}
-  - {fileID: 4016398349323206}
-  - {fileID: 4991665432160622}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 4388596583815700}
-  m_AABB:
-    m_Center: {x: 0.0000017285347, y: 1.6243598, z: -0.005243838}
-    m_Extent: {x: 1.6845055, y: 1.6243601, z: 0.4333868}
   m_DirtyAABB: 0
 --- !u!137 &137541216947873484
 SkinnedMeshRenderer:
@@ -3143,3 +2965,18 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0000017285347, y: 1.41348, z: -0.07679981}
     m_Extent: {x: 1.6845055, y: 1.4134803, z: 0.4339838}
   m_DirtyAABB: 0
+--- !u!208 &208435712873054044
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063500868937916}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

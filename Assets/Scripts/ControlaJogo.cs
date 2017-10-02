@@ -13,7 +13,7 @@ public class ControlaJogo : MonoBehaviour
 	private int qtdMorteZumbis = 0;
 	public Text TextQtdMorteZumbis;
 	public Text TextQtdMorteZumbisGameOver;
-	
+	public Text TextChefeAparece;
 
 	void Start()
 	{
@@ -33,7 +33,7 @@ public class ControlaJogo : MonoBehaviour
 	public void GameOver ()
 	{
 		Time.timeScale = 0;
-		TextTempoSobrevivencia.text = "Você sobreviveu " + Mathf.Floor(Time.time/60) + " min e " + Mathf.Floor(Time.time%60) + "segundos";
+		TextTempoSobrevivencia.text = "Você sobreviveu " + Mathf.Floor(Time.timeSinceLevelLoad/60) + " min e " + Mathf.Floor(Time.timeSinceLevelLoad%60) + " segundos";
 		StartCoroutine(MostrarObjeto(GameOverPanel, 1));
 		StartCoroutine(IncrementaValorAte(qtdMorteZumbis));				
 	}
@@ -48,6 +48,12 @@ public class ControlaJogo : MonoBehaviour
 	{
 		qtdMorteZumbis++;
 		TextQtdMorteZumbis.text = "x " + qtdMorteZumbis;
+	}
+
+	public void MorteZumbiInterface(int score)
+	{
+		qtdMorteZumbis += score;
+		TextQtdMorteZumbis.text = "x " + qtdMorteZumbis;		
 	}
 
 	IEnumerator IncrementaValorAte(int valor)
@@ -67,8 +73,29 @@ public class ControlaJogo : MonoBehaviour
 		StopCoroutine("IncrementaValorAte");
 	}
 
-	public void ReiniciarJogo ()
+	public void TextoChefeAparece ()
+	{
+		StartCoroutine(DesaparecerTexto(2, TextChefeAparece));
+	}
+
+	public void TrocarCenaJogo ()
 	{
 		SceneManager.LoadScene("game");
+	}
+
+	IEnumerator DesaparecerTexto (float tempoDeSumico, Text text)
+	{
+		text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
+		text.gameObject.SetActive(true);
+		yield return new WaitForSeconds(1);	
+		while(text.color.a > 0)
+		{
+			text.color = new Color(text.color.r, text.color.g, text.color.b, text.color.a - (Time.deltaTime / tempoDeSumico));
+			if(text.color.a <= 0)
+			{
+				text.gameObject.SetActive(false);
+			}
+			yield return null;
+		}
 	}
 }
