@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4995183199894934}
   - component: {fileID: 33685958817705342}
   - component: {fileID: 23691380129191702}
-  m_Layer: 0
+  - component: {fileID: 64832623876432820}
+  m_Layer: 8
   m_Name: Rua_FaixaDePedestre_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1865405303609596}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!23 &23691380129191702
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -79,4 +80,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1865405303609596}
+  m_Mesh: {fileID: 4300000, guid: 5f516ac64a098ac48ab9668b40be6d32, type: 3}
+--- !u!64 &64832623876432820
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1865405303609596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 5f516ac64a098ac48ab9668b40be6d32, type: 3}

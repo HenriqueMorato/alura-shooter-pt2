@@ -6,6 +6,7 @@ public class Bala : MonoBehaviour {
 
     public float Velocidade = 20;
     private Rigidbody rigidbodyBala;
+	public GameObject SangueZumbi;
 
     private void Start()
     {
@@ -23,7 +24,10 @@ public class Bala : MonoBehaviour {
     {
         if(objetoDeColisao.tag == "Inimigo")
         {
-            Destroy(objetoDeColisao.gameObject);
+            Destroy(objetoDeColisao.gameObject, 1f);
+			objetoDeColisao.enabled = false;
+			GameObject particula = Instantiate(SangueZumbi, transform.position, objetoDeColisao.transform.rotation);
+			Destroy(particula, 1f);
         }
 
         Destroy(gameObject);

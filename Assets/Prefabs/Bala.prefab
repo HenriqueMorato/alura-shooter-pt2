@@ -122,3 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Velocidade: 30
+  SangueZumbi: {fileID: 1480449043313202, guid: c866739cc0c344744b37c892e683eade,
+    type: 2}
