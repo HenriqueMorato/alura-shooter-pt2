@@ -38,15 +38,18 @@ public class ControlaBoss : MonoBehaviour
 		agente.destination = jogador.position;
 		animacaoPersonagem.AnimacaoMovimento(agente.velocity);
 
-		if(agente.remainingDistance <= agente.stoppingDistance)
+		if(!agente.pathPending)
 		{
-			animacaoPersonagem.Atacar(true);
-			Vector3 direcao = jogador.position - transform.position;
-			movimentoPersonagem.Rotacao(direcao);	
-		}	
-		else
-		{
-			animacaoPersonagem.Atacar(false);
+			if(agente.remainingDistance <= agente.stoppingDistance)
+			{
+				animacaoPersonagem.Atacar(true);
+				Vector3 direcao = jogador.position - transform.position;
+				movimentoPersonagem.Rotacao(direcao);	
+			}	
+			else
+			{
+				animacaoPersonagem.Atacar(false);
+			}
 		}	
 	}
 
