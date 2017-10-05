@@ -7,7 +7,7 @@ public class ControlaAudio : MonoBehaviour {
 	public AudioSource audioSource;
 	public static AudioSource instancia;
 
-	void Start()
+	void Awake()
 	{
 		instancia = audioSource;
 	}

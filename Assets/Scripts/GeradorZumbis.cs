@@ -14,7 +14,7 @@ public class GeradorZumbis : MonoBehaviour {
     private float qtdZumbis;
     private float tempoAumentoDificuldade = 30;
     private float contadorDifuculdade = 0;
-    public AudioClip SomGrunhido;
+    public AudioClip SomDeGrunhido;
     public LayerMask layerZumbi;
 
 
@@ -54,7 +54,7 @@ public class GeradorZumbis : MonoBehaviour {
         qtdZumbis++;
         if(Random.value < 0.1 && sound)
         {
-            ControlaAudio.instancia.PlayOneShot(SomGrunhido);
+            ControlaAudio.instancia.PlayOneShot(SomDeGrunhido);
         }
     }
 
@@ -78,7 +78,7 @@ public class GeradorZumbis : MonoBehaviour {
         qtdZumbis++;
         if(Random.value < 0.1 && sound)
         {
-            ControlaAudio.instancia.PlayOneShot(SomGrunhido);
+            ControlaAudio.instancia.PlayOneShot(SomDeGrunhido);
         }
     }
 

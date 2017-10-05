@@ -12,7 +12,7 @@ public class ControlaJogador : MonoBehaviour, IMatavel
     private MovimentoJogador movimentoJogador;
     [HideInInspector]
     public Status status;
-    public AudioClip SomDano;
+    public AudioClip SomDeDano;
 
     private void Start()
     {
@@ -43,7 +43,7 @@ public class ControlaJogador : MonoBehaviour, IMatavel
     public void TomarDano (int dano)
     {
         status.Vida -= dano;
-        ControlaAudio.instancia.PlayOneShot(SomDano);
+        ControlaAudio.instancia.PlayOneShot(SomDeDano);
         ControlaInterface.instancia.AtualizaSliderVidaJogador();
         if(status.Vida <= 0)
         {

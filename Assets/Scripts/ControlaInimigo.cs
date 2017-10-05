@@ -17,7 +17,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
     [HideInInspector]
     public GeradorZumbis meuGerador;
     public GameObject KitMedico;
-    public AudioClip SomMorte;
+    public AudioClip SomDaMorte;
     
 	// Use this for initialization
 	void Start () {
@@ -100,7 +100,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
         movimentoPersonagem.enabled = false;
         this.enabled = false;
         meuGerador.DiminuiQtdZumbis();
-        ControlaAudio.instancia.PlayOneShot(SomMorte);
+        ControlaAudio.instancia.PlayOneShot(SomDaMorte);
         ControlaInterface.instancia.MorteZumbiInterface();
 
         if(Random.value < 0.1)
