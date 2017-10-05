@@ -86,7 +86,6 @@ public class ControlaChefe : MonoBehaviour, IMatavel
         //ControlaAudio.instancia.PlayOneShot(SomMorte);
         ControlaInterface.instancia.MorteZumbiInterface(10);
 
-        GameObject kitMedico = Instantiate(KitMedicoPrefab, transform.position, Quaternion.identity) as GameObject;
-        Destroy(kitMedico, 5);
+        Instantiate(KitMedicoPrefab, transform.position, Quaternion.identity);
     }
 }

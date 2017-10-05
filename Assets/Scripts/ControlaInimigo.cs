@@ -105,8 +105,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 
         if(Random.value < 0.1)
         {
-            GameObject kitMedico = Instantiate(KitMedico, transform.position, Quaternion.identity) as GameObject;
-            Destroy(kitMedico, 5);
+            Instantiate(KitMedico, transform.position, Quaternion.identity);
         }
     }
 }

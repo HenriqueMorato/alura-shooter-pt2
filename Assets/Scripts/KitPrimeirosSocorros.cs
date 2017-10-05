@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class KitPrimeirosSocorros : MonoBehaviour 
 {
+	void Start ()
+	{
+		Destroy(gameObject, 5);
+	}
 	void OnTriggerEnter(Collider objeto)
 	{
 		if(objeto.tag == Tags.Jogador)
