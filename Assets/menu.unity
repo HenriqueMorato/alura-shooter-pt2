@@ -662,6 +662,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 1.5
+  DistanciaDoJogadorGeracao: 22
+  SomGrunhido: {fileID: 0}
+  layerZumbi:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &68630412
 Transform:
   m_ObjectHideFlags: 0
@@ -1005,6 +1010,7 @@ MonoBehaviour:
   TextTempoSobrevivencia: {fileID: 0}
   TextQtdMorteZumbis: {fileID: 0}
   TextQtdMorteZumbisGameOver: {fileID: 0}
+  TextChefeAparece: {fileID: 0}
 --- !u!4 &187248839
 Transform:
   m_ObjectHideFlags: 0
@@ -2217,6 +2223,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 1
+  DistanciaDoJogadorGeracao: 22
+  SomGrunhido: {fileID: 0}
+  layerZumbi:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &428380375
 Transform:
   m_ObjectHideFlags: 0
@@ -3401,6 +3412,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 2
+  DistanciaDoJogadorGeracao: 22
+  SomGrunhido: {fileID: 0}
+  layerZumbi:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &759545496
 Transform:
   m_ObjectHideFlags: 0
@@ -4550,6 +4566,10 @@ Prefab:
     - target: {fileID: 4767077776423168, guid: 046ffdde8d21b4217a241f4730b8ec1a, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -98.990005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480449043313202, guid: 046ffdde8d21b4217a241f4730b8ec1a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 046ffdde8d21b4217a241f4730b8ec1a, type: 2}
@@ -6177,7 +6197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1320272341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7418,6 +7438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bala: {fileID: 1826845318185780, guid: 4771099cc18cb6146b3ba07b97b26e9c, type: 2}
   CanoDaArma: {fileID: 878855068}
+  SomTiro: {fileID: 0}
 --- !u!114 &1665214588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7459,6 +7480,7 @@ MonoBehaviour:
     m_Bits: 256
   TextoGameOver: {fileID: 0}
   status: {fileID: 0}
+  SomDano: {fileID: 0}
 --- !u!114 &1665214591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7471,6 +7493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17fb743c5a346e59b6a657e40a08ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VidaInicial: 100
   Vida: 100
   Velocidade: 10
   DistanciaDeVisao: 15
@@ -7698,6 +7721,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 3
+  DistanciaDoJogadorGeracao: 22
+  SomGrunhido: {fileID: 0}
+  layerZumbi:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &1716168738
 Transform:
   m_ObjectHideFlags: 0
@@ -9395,7 +9423,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10

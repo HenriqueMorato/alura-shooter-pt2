@@ -12,7 +12,7 @@ public class AnimacaoPersonagem : MonoBehaviour
 		animator = GetComponent<Animator>();
 	}
 
-	public void AnimacaoMovimento (Vector3 direcao)
+	public void AnimarMovimento (Vector3 direcao)
 	{
 		animator.SetFloat("Movendo", direcao.magnitude);
 	} 		

@@ -10,14 +10,14 @@ public class MovimentoPersonagem : MonoBehaviour {
         rigidbodyJogador = GetComponent<Rigidbody>();
     }
 	
-	public void Movimentacao (Vector3 direcao, float velocidade)
+	public void Movimentar (Vector3 direcao, float velocidade)
 	{
 		rigidbodyJogador.MovePosition
             (rigidbodyJogador.position +
             (direcao * velocidade * Time.deltaTime));
 	}
 
-    public void Rotacao (Vector3 direcao)
+    public void Rotacionar (Vector3 direcao)
     {
         Quaternion novaRotacao = Quaternion.LookRotation(direcao);
         rigidbodyJogador.MoveRotation(novaRotacao);

@@ -8,7 +8,7 @@ public class ControlaJogador : MonoBehaviour
     private Vector3 direcao;
     public LayerMask MascaraChao;
     public GameObject TextoGameOver;
-    private AnimacaoPersonagem animacaoPersonagem;
+    private AnimacaoPersonagem animacaoJogador;
     private MovimentoJogador movimentoJogador;
     [HideInInspector]
     public Status status;
@@ -17,7 +17,7 @@ public class ControlaJogador : MonoBehaviour
     private void Start()
     {
         movimentoJogador = GetComponent<MovimentoJogador>();
-        animacaoPersonagem = GetComponent<AnimacaoPersonagem>();
+        animacaoJogador = GetComponent<AnimacaoPersonagem>();
         status = GetComponent<Status>();
     }
 
@@ -30,12 +30,12 @@ public class ControlaJogador : MonoBehaviour
 
         direcao = new Vector3(eixoX, 0, eixoZ);
 
-        animacaoPersonagem.AnimacaoMovimento (direcao);
+        animacaoJogador.AnimarMovimento (direcao);
     }
 
     void FixedUpdate()
     {
-        movimentoJogador.Movimentacao(direcao, status.Velocidade);
+        movimentoJogador.Movimentar(direcao, status.Velocidade);
 
         movimentoJogador.RotacaoJogador(MascaraChao);
     }
@@ -44,10 +44,10 @@ public class ControlaJogador : MonoBehaviour
     {
         status.Vida -= dano;
         ControlaAudio.instancia.PlayOneShot(SomDano);
-        ControlaJogo.instancia.AtualizaSliderVidaJogador();
+        ControlaInterface.instancia.AtualizaSliderVidaJogador();
         if(status.Vida <= 0)
         {
-            ControlaJogo.instancia.GameOver();
+            ControlaInterface.instancia.GameOver();
         }
     }
 
@@ -58,6 +58,6 @@ public class ControlaJogador : MonoBehaviour
         {
             status.Vida = status.VidaInicial;
         }
-        ControlaJogo.instancia.AtualizaSliderVidaJogador();        
+        ControlaInterface.instancia.AtualizaSliderVidaJogador();        
     }
 }

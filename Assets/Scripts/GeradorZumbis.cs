@@ -10,9 +10,9 @@ public class GeradorZumbis : MonoBehaviour {
     public float DistanciaDoJogadorGeracao = 22;
     private Transform player;
     private float DistanciaGeracao = 3;
-    private float qtdMinZumbis = 3;
+    private float qtdMaxZumbis = 2;
     private float qtdZumbis;
-    private float tempoAumentoDificuldade = 10;
+    private float tempoAumentoDificuldade = 30;
     private float contadorDifuculdade = 0;
     public AudioClip SomGrunhido;
     public LayerMask layerZumbi;
@@ -21,7 +21,7 @@ public class GeradorZumbis : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag(Tags.Jogador).transform;
-        for (int i = 0; i < qtdMinZumbis; i++) {
+        for (int i = 0; i < qtdMaxZumbis; i++) {
             GerarZumbiNovo(false);
         }
 	}
@@ -33,7 +33,7 @@ public class GeradorZumbis : MonoBehaviour {
         {
             contadorTempo += Time.deltaTime;
 
-            if(contadorTempo >= TempoGerarZumbi && qtdZumbis < qtdMinZumbis)
+            if(contadorTempo >= TempoGerarZumbi && qtdZumbis < qtdMaxZumbis)
             {
                 GerarZumbiNovo(true);
                 contadorTempo = 0;
@@ -43,7 +43,7 @@ public class GeradorZumbis : MonoBehaviour {
         if(Time.timeSinceLevelLoad > contadorDifuculdade)
         {
             contadorDifuculdade = Time.timeSinceLevelLoad + tempoAumentoDificuldade;
-            qtdMinZumbis++;
+            qtdMaxZumbis++;
         }
     }
 

@@ -34,8 +34,8 @@ public class ControlaInimigo : MonoBehaviour {
         float distancia = Vector3.Distance(transform.position, Jogador.transform.position);
 
 
-        movimentoPersonagem.Rotacao(direcao);
-	    animacaoPersonagem.AnimacaoMovimento(direcao);        
+        movimentoPersonagem.Rotacionar(direcao);
+	    animacaoPersonagem.AnimarMovimento(direcao);        
         if(distancia > status.DistanciaDeVisao)
         {
             Vagar();
@@ -44,7 +44,7 @@ public class ControlaInimigo : MonoBehaviour {
         {  
             direcao = Jogador.transform.position - transform.position;            
 
-            movimentoPersonagem.Movimentacao(direcao.normalized, status.Velocidade);
+            movimentoPersonagem.Movimentar(direcao.normalized, status.Velocidade);
 
             animacaoPersonagem.Atacar(false);
         }
@@ -68,7 +68,7 @@ public class ControlaInimigo : MonoBehaviour {
         if(Vector3.Distance(transform.position, posicaoAleatoria) >= 0.05f)
 		{
 		    direcao = posicaoAleatoria - transform.position;
-            movimentoPersonagem.Movimentacao(direcao.normalized, status.Velocidade);            
+            movimentoPersonagem.Movimentar(direcao.normalized, status.Velocidade);            
 		}
     }
 
@@ -86,7 +86,7 @@ public class ControlaInimigo : MonoBehaviour {
         this.enabled = false;
         meuGerador.DiminuiQtdZumbis();
         ControlaAudio.instancia.PlayOneShot(SomMorte);
-        ControlaJogo.instancia.MorteZumbiInterface();
+        ControlaInterface.instancia.MorteZumbiInterface();
 
         if(Random.value < 0.1)
         {

@@ -7,8 +7,6 @@ public class MovimentoJogador : MovimentoPersonagem
     public void RotacaoJogador (LayerMask MascaraChao)
 	{
 		Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(raio.origin, raio.direction * 100, Color.red);
-
         RaycastHit impacto;
 
         if(Physics.Raycast(raio, out impacto, 100, MascaraChao))
@@ -17,7 +15,7 @@ public class MovimentoJogador : MovimentoPersonagem
 
             posicaoMiraJogador.y = transform.position.y;
 
-            Rotacao(posicaoMiraJogador);
+            Rotacionar(posicaoMiraJogador);
         }
 	}
 }

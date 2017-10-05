@@ -36,7 +36,7 @@ public class ControlaBoss : MonoBehaviour
 	void Update()
 	{
 		agente.destination = jogador.position;
-		animacaoPersonagem.AnimacaoMovimento(agente.velocity);
+		animacaoPersonagem.AnimarMovimento(agente.velocity);
 
 		if(!agente.pathPending)
 		{
@@ -44,7 +44,7 @@ public class ControlaBoss : MonoBehaviour
 			{
 				animacaoPersonagem.Atacar(true);
 				Vector3 direcao = jogador.position - transform.position;
-				movimentoPersonagem.Rotacao(direcao);	
+				movimentoPersonagem.Rotacionar(direcao);	
 			}	
 			else
 			{
@@ -77,7 +77,7 @@ public class ControlaBoss : MonoBehaviour
 		agente.enabled = false;
         this.enabled = false;
         //ControlaAudio.instancia.PlayOneShot(SomMorte);
-        ControlaJogo.instancia.MorteZumbiInterface(10);
+        ControlaInterface.instancia.MorteZumbiInterface(10);
 
         GameObject kitMedico = Instantiate(KitMedicoPrefab, transform.position, Quaternion.identity) as GameObject;
         Destroy(kitMedico, 5);
