@@ -1399,9 +1399,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59eabf864c8a857479298ebeae16c339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PorcentagemDeGerarKitMedico: 0.1
   meuGerador: {fileID: 0}
   KitMedico: {fileID: 1060151288946202, guid: 6150c6f66b7034ec5b3672478195682a, type: 2}
-  SomMorte: {fileID: 8300000, guid: 56dac1a77e8b2405797ed658008cf72a, type: 3}
+  SomDaMorte: {fileID: 8300000, guid: 56dac1a77e8b2405797ed658008cf72a, type: 3}
 --- !u!136 &136079381028039656
 CapsuleCollider:
   m_ObjectHideFlags: 1
