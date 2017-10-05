@@ -72,7 +72,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 		}
     }
 
-    void DanoJogador ()
+    void BateNoJogador ()
     {
         Jogador.GetComponent<ControlaJogador>().TomarDano(Random.Range(25,40));
     }
@@ -97,7 +97,6 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
         movimentoPersonagem.CairPeloChao();
         animacaoPersonagem.Morte();
         Destroy(gameObject, 12);
-        movimentoPersonagem.enabled = false;
         this.enabled = false;
         meuGerador.DiminuiQtdZumbis();
         ControlaAudio.instancia.PlayOneShot(SomDaMorte);

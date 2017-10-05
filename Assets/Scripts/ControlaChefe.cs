@@ -5,12 +5,12 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class ControlaBoss : MonoBehaviour, IMatavel 
+public class ControlaChefe : MonoBehaviour, IMatavel 
 {
 	private NavMeshAgent agente;
 	private Transform jogador;
-	private AnimacaoPersonagem animacaoPersonagem;
-	private MovimentoPersonagem movimentoPersonagem;
+	private AnimacaoPersonagem animacaoChefe;
+	private MovimentoPersonagem movimentoChefe;
 	private Status status;
 	public GameObject KitMedicoPrefab;
 
@@ -26,8 +26,8 @@ public class ControlaBoss : MonoBehaviour, IMatavel
 		agente = GetComponent<NavMeshAgent>();
 		agente.speed = status.Velocidade;
 		jogador = GameObject.FindWithTag(Tags.Jogador).transform;
-		animacaoPersonagem = GetComponent<AnimacaoPersonagem>();
-		movimentoPersonagem = GetComponent<MovimentoPersonagem>();
+		animacaoChefe = GetComponent<AnimacaoPersonagem>();
+		movimentoChefe = GetComponent<MovimentoPersonagem>();
 		sliderVidaChefe = transform.GetComponentInChildren<Slider>();
 		sliderVidaChefe.value = sliderVidaChefe.maxValue = status.VidaInicial;
 		AtualizarInterface();
@@ -36,24 +36,24 @@ public class ControlaBoss : MonoBehaviour, IMatavel
 	void Update()
 	{
 		agente.destination = jogador.position;
-		animacaoPersonagem.AnimarMovimento(agente.velocity);
+		animacaoChefe.AnimarMovimento(agente.velocity);
 
 		if(!agente.pathPending)
 		{
 			if(agente.remainingDistance <= agente.stoppingDistance)
 			{
-				animacaoPersonagem.Atacar(true);
+				animacaoChefe.Atacar(true);
 				Vector3 direcao = jogador.position - transform.position;
-				movimentoPersonagem.Rotacionar(direcao);	
+				movimentoChefe.Rotacionar(direcao);	
 			}	
 			else
 			{
-				animacaoPersonagem.Atacar(false);
+				animacaoChefe.Atacar(false);
 			}
 		}	
 	}
 
-	void DanoJogador ()
+	void BateNoJogador ()
     {
         jogador.GetComponent<ControlaJogador>().TomarDano(Random.Range(40,60));
     }
@@ -77,10 +77,9 @@ public class ControlaBoss : MonoBehaviour, IMatavel
 
     public void Morrer()
     {
-        movimentoPersonagem.CairPeloChao();
-        animacaoPersonagem.Morte();
+        movimentoChefe.CairPeloChao();
+        animacaoChefe.Morte();
         Destroy(gameObject, 2);
-        movimentoPersonagem.enabled = false;
 		agente.enabled = false;
         this.enabled = false;
         //ControlaAudio.instancia.PlayOneShot(SomMorte);

@@ -30,11 +30,11 @@ public class Bala : MonoBehaviour {
 			    Instantiate(SangueZumbi, transform.position, objetoDeColisao.transform.rotation);                             
             break;
             case Tags.Chefe:
-                objetoDeColisao.GetComponent<ControlaBoss>().TomarDano(Dano);
+                objetoDeColisao.GetComponent<ControlaChefe>().TomarDano(Dano);
 			    Instantiate(SangueZumbi, transform.position, objetoDeColisao.transform.rotation);                                            
             break;
         }
-        
+
         Destroy(gameObject);
     }
 }

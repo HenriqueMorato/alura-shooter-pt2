@@ -56,8 +56,8 @@
      <Compile Include="Assets\Scripts\Billboard.cs" />
      <Compile Include="Assets\Scripts\ControlaArma.cs" />
      <Compile Include="Assets\Scripts\ControlaAudio.cs" />
-     <Compile Include="Assets\Scripts\ControlaBoss.cs" />
      <Compile Include="Assets\Scripts\ControlaCamera.cs" />
+     <Compile Include="Assets\Scripts\ControlaChefe.cs" />
      <Compile Include="Assets\Scripts\ControlaInimigo.cs" />
      <Compile Include="Assets\Scripts\ControlaInterface.cs" />
      <Compile Include="Assets\Scripts\ControlaJogador.cs" />
