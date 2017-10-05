@@ -9,9 +9,9 @@ public class GeradorZumbis : MonoBehaviour {
     public float TempoGerarZumbi = 1;
     public float DistanciaDoJogadorGeracao = 22;
     private Transform player;
-    private float DistanciaGeracao = 3;
-    private float qtdMaxZumbis = 2;
-    private float qtdZumbis;
+    private float DistanciaDeGeracao = 3;
+    private float quantidadeMaximaDeZumbis = 2;
+    private float quantidadeDeZumbis;
     private float tempoAumentoDificuldade = 30;
     private float contadorDifuculdade = 0;
     public AudioClip SomDeGrunhido;
@@ -23,7 +23,7 @@ public class GeradorZumbis : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag(Tags.Jogador).transform;
-        for (int i = 0; i < qtdMaxZumbis; i++) {
+        for (int i = 0; i < quantidadeMaximaDeZumbis; i++) {
             StartCoroutine(GerarZumbiNovo(false));
         }
 	}
@@ -35,7 +35,7 @@ public class GeradorZumbis : MonoBehaviour {
         {
             contadorTempo += Time.deltaTime;
 
-            if(contadorTempo >= TempoGerarZumbi && qtdZumbis < qtdMaxZumbis)
+            if(contadorTempo >= TempoGerarZumbi && quantidadeDeZumbis < quantidadeMaximaDeZumbis)
             {
                 StartCoroutine(GerarZumbiNovo(true));
                 contadorTempo = 0;
@@ -45,8 +45,13 @@ public class GeradorZumbis : MonoBehaviour {
         if(Time.timeSinceLevelLoad > contadorDifuculdade)
         {
             contadorDifuculdade = Time.timeSinceLevelLoad + tempoAumentoDificuldade;
-            qtdMaxZumbis++;
+            quantidadeMaximaDeZumbis++;
         }
+    }
+
+    void OnDrawGizmos() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, DistanciaDeGeracao);
     }
 
     IEnumerator GerarZumbiNovo (bool utilizarSom)
@@ -63,7 +68,7 @@ public class GeradorZumbis : MonoBehaviour {
  
         ControlaInimigo zumbi = Instantiate(Zumbi, positionToInstantiate, Quaternion.identity).GetComponent<ControlaInimigo>();
         zumbi.meuGerador = this;
-        qtdZumbis++;
+        quantidadeDeZumbis++;
         if(Random.value < PorcentagemDeGerarComSom && utilizarSom)
         {
             ControlaAudio.instancia.PlayOneShot(SomDeGrunhido);
@@ -72,12 +77,12 @@ public class GeradorZumbis : MonoBehaviour {
 
     public void DiminuiQtdZumbis ()
     {
-        qtdZumbis--;
+        quantidadeDeZumbis--;
     }
 
     Vector3 AleatorizarPosicao ()
 	{
-		Vector3 posicaoAleatoria = transform.position + (Random.insideUnitSphere * DistanciaGeracao);
+		Vector3 posicaoAleatoria = transform.position + (Random.insideUnitSphere * DistanciaDeGeracao);
 		posicaoAleatoria.y = 0;
 
 		return posicaoAleatoria;
