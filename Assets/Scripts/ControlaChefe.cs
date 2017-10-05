@@ -55,7 +55,8 @@ public class ControlaChefe : MonoBehaviour, IMatavel
 
 	void BateNoJogador ()
     {
-        jogador.GetComponent<ControlaJogador>().TomarDano(Random.Range(40,60));
+		int dano = Random.Range(40,60);
+        jogador.GetComponent<ControlaJogador>().TomarDano(dano);
     }
 
 	public void TomarDano(int dano)

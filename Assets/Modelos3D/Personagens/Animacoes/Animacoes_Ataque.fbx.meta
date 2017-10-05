@@ -109,7 +109,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.5343511
-        functionName: DanoJogador
+        functionName: BateNoJogador
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
