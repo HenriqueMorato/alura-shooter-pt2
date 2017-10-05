@@ -56,17 +56,17 @@ public class GeradorZumbis : MonoBehaviour {
 
     IEnumerator GerarZumbiNovo (bool utilizarSom)
     {
-        Vector3 positionToInstantiate = AleatorizarPosicao();
-        Collider[] hitColliders = Physics.OverlapSphere(positionToInstantiate, 1, layerZumbi);;
+        Vector3 posicaoDeCriacao = AleatorizarPosicao();
+        Collider[] Colisores = Physics.OverlapSphere(posicaoDeCriacao, 1, layerZumbi);;
 
-        while (hitColliders.Length > 0)
+        while (Colisores.Length > 0)
         {
-            positionToInstantiate = AleatorizarPosicao();
-            hitColliders = Physics.OverlapSphere(positionToInstantiate, 1, layerZumbi);
+            posicaoDeCriacao = AleatorizarPosicao();
+            Colisores = Physics.OverlapSphere(posicaoDeCriacao, 1, layerZumbi);
             yield return null;
         }
  
-        ControlaInimigo zumbi = Instantiate(Zumbi, positionToInstantiate, Quaternion.identity).GetComponent<ControlaInimigo>();
+        ControlaInimigo zumbi = Instantiate(Zumbi, posicaoDeCriacao, Quaternion.identity).GetComponent<ControlaInimigo>();
         zumbi.meuGerador = this;
         quantidadeDeZumbis++;
         if(Random.value < PorcentagemDeGerarComSom && utilizarSom)
