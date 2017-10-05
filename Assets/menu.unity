@@ -663,7 +663,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 1.5
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 0}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 0
@@ -1008,8 +1008,8 @@ MonoBehaviour:
   sliderVidaJogador: {fileID: 0}
   GameOverPanel: {fileID: 0}
   TextTempoSobrevivencia: {fileID: 0}
-  TextQtdMorteZumbis: {fileID: 0}
-  TextQtdMorteZumbisGameOver: {fileID: 0}
+  TextQuantidadeZumbisMortos: {fileID: 0}
+  TextQuantidadeZumbisMortosGameOver: {fileID: 0}
   TextChefeAparece: {fileID: 0}
 --- !u!4 &187248839
 Transform:
@@ -2224,7 +2224,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 1
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 0}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 0
@@ -3413,7 +3413,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 2
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 0}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 0
@@ -4569,9 +4569,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1480449043313202, guid: 046ffdde8d21b4217a241f4730b8ec1a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 198222183695471472, guid: 046ffdde8d21b4217a241f4730b8ec1a,
+        type: 2}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114541053678182248, guid: 046ffdde8d21b4217a241f4730b8ec1a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 046ffdde8d21b4217a241f4730b8ec1a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &969888279
@@ -7438,7 +7444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bala: {fileID: 1826845318185780, guid: 4771099cc18cb6146b3ba07b97b26e9c, type: 2}
   CanoDaArma: {fileID: 878855068}
-  SomTiro: {fileID: 0}
+  SomDeTiro: {fileID: 0}
 --- !u!114 &1665214588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7480,7 +7486,7 @@ MonoBehaviour:
     m_Bits: 256
   TextoGameOver: {fileID: 0}
   status: {fileID: 0}
-  SomDano: {fileID: 0}
+  SomDeDano: {fileID: 0}
 --- !u!114 &1665214591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7722,7 +7728,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 3
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 0}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 0

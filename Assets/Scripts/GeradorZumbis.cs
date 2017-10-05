@@ -17,12 +17,14 @@ public class GeradorZumbis : MonoBehaviour {
     public AudioClip SomDeGrunhido;
     public LayerMask layerZumbi;
 
+    private const float PorcentagemDeGerarComSom = 0.1f;
+
 
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag(Tags.Jogador).transform;
         for (int i = 0; i < qtdMaxZumbis; i++) {
-            GerarZumbiNovo(false);
+            StartCoroutine(GerarZumbiNovo(false));
         }
 	}
 	
@@ -35,7 +37,7 @@ public class GeradorZumbis : MonoBehaviour {
 
             if(contadorTempo >= TempoGerarZumbi && qtdZumbis < qtdMaxZumbis)
             {
-                GerarZumbiNovo(true);
+                StartCoroutine(GerarZumbiNovo(true));
                 contadorTempo = 0;
             }
         }
@@ -47,36 +49,22 @@ public class GeradorZumbis : MonoBehaviour {
         }
     }
 
-    void GerarZumbi (bool sound)
+    IEnumerator GerarZumbiNovo (bool utilizarSom)
     {
-        ControlaInimigo zumbi = Instantiate(Zumbi, AleatorizarPosicao(), transform.rotation).GetComponent<ControlaInimigo>(); 
-        zumbi.meuGerador = this;
-        qtdZumbis++;
-        if(Random.value < 0.1 && sound)
-        {
-            ControlaAudio.instancia.PlayOneShot(SomDeGrunhido);
-        }
-    }
+        Vector3 positionToInstantiate = AleatorizarPosicao();
+        Collider[] hitColliders = Physics.OverlapSphere(positionToInstantiate, 1, layerZumbi);;
 
-    void GerarZumbiNovo (bool sound)
-    {
-        Vector3 positionToInstantiate;
-        Collider[] hitColliders;
-     
-        do
+        while (hitColliders.Length > 0)
         {
             positionToInstantiate = AleatorizarPosicao();
             hitColliders = Physics.OverlapSphere(positionToInstantiate, 1, layerZumbi);
-            for (int i = 0; i < hitColliders.Length; i++)
-            {
-                Debug.Log(hitColliders[i].name);
-            }            
-        } while (hitColliders.Length > 0);
+            yield return null;
+        }
  
         ControlaInimigo zumbi = Instantiate(Zumbi, positionToInstantiate, Quaternion.identity).GetComponent<ControlaInimigo>();
         zumbi.meuGerador = this;
         qtdZumbis++;
-        if(Random.value < 0.1 && sound)
+        if(Random.value < PorcentagemDeGerarComSom && utilizarSom)
         {
             ControlaAudio.instancia.PlayOneShot(SomDeGrunhido);
         }

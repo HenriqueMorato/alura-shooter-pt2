@@ -14,6 +14,6 @@ public class Status : MonoBehaviour
 
 	void Start ()
 	{
-		VidaInicial = Vida;
+		Vida = VidaInicial;
 	}
 }

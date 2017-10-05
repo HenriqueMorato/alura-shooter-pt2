@@ -928,7 +928,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 1.5
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 8300000, guid: db43580a8bfdb4b05b8d91330a075f1f, type: 3}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 1536
@@ -3668,7 +3668,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 1
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 8300000, guid: db43580a8bfdb4b05b8d91330a075f1f, type: 3}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 1536
@@ -4770,7 +4770,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 3
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 8300000, guid: db43580a8bfdb4b05b8d91330a075f1f, type: 3}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 1536
@@ -5919,7 +5919,7 @@ GameObject:
   - component: {fileID: 757863315}
   - component: {fileID: 757863314}
   m_Layer: 0
-  m_Name: ControladorJogo
+  m_Name: ControladorInterface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5939,8 +5939,8 @@ MonoBehaviour:
   sliderVidaJogador: {fileID: 455020827}
   GameOverPanel: {fileID: 1475762575}
   TextTempoSobrevivencia: {fileID: 199688286}
-  TextQtdMorteZumbis: {fileID: 152283028}
-  TextQtdMorteZumbisGameOver: {fileID: 1324330970}
+  TextQuantidadeZumbisMortos: {fileID: 152283028}
+  TextQuantidadeZumbisMortosGameOver: {fileID: 1324330970}
   TextChefeAparece: {fileID: 29791469}
 --- !u!4 &757863315
 Transform:
@@ -5985,7 +5985,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 2
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 8300000, guid: db43580a8bfdb4b05b8d91330a075f1f, type: 3}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 1536
@@ -8196,7 +8196,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 2
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 8300000, guid: db43580a8bfdb4b05b8d91330a075f1f, type: 3}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 1536
@@ -9978,7 +9978,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 2
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 8300000, guid: db43580a8bfdb4b05b8d91330a075f1f, type: 3}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 1536
@@ -12257,7 +12257,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 3
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 8300000, guid: db43580a8bfdb4b05b8d91330a075f1f, type: 3}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 1536
@@ -12888,7 +12888,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 3
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 8300000, guid: db43580a8bfdb4b05b8d91330a075f1f, type: 3}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 1536
@@ -14038,7 +14038,7 @@ MonoBehaviour:
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 2}
   TempoGerarZumbi: 1
   DistanciaDoJogadorGeracao: 22
-  SomGrunhido: {fileID: 8300000, guid: db43580a8bfdb4b05b8d91330a075f1f, type: 3}
+  SomDeGrunhido: {fileID: 0}
   layerZumbi:
     serializedVersion: 2
     m_Bits: 1536

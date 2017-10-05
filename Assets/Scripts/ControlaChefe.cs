@@ -84,7 +84,7 @@ public class ControlaChefe : MonoBehaviour, IMatavel
 		agente.enabled = false;
         this.enabled = false;
         //ControlaAudio.instancia.PlayOneShot(SomMorte);
-        ControlaInterface.instancia.MorteZumbiInterface(10);
+        ControlaInterface.instancia.AtualizarZumbisInterface(10);
 
         Instantiate(KitMedicoPrefab, transform.position, Quaternion.identity);
     }

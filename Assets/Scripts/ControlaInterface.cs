@@ -10,9 +10,9 @@ public class ControlaInterface : MonoBehaviour
 	public static ControlaInterface instancia;
 	public GameObject GameOverPanel;
 	public Text TextTempoSobrevivencia;
-	private int qtdMorteZumbis = 0;
-	public Text TextQtdMorteZumbis;
-	public Text TextQtdMorteZumbisGameOver;
+	private int quantidadeMorteZumbis = 0;
+	public Text TextQuantidadeZumbisMortos;
+	public Text TextQuantidadeZumbisMortosGameOver;
 	public Text TextChefeAparece;
 
 	void Awake ()
@@ -38,7 +38,7 @@ public class ControlaInterface : MonoBehaviour
 		Time.timeScale = 0;
 		TextTempoSobrevivencia.text = "Você sobreviveu " + Mathf.Floor(Time.timeSinceLevelLoad/60) + " min e " + Mathf.Floor(Time.timeSinceLevelLoad%60) + " segundos";
 		StartCoroutine(MostrarObjeto(GameOverPanel, 1));
-		StartCoroutine(IncrementaValorAte(qtdMorteZumbis, 2));				
+		StartCoroutine(IncrementaValorAte(quantidadeMorteZumbis, 2));				
 	}
 
 	IEnumerator MostrarObjeto(GameObject obj, float tempo)
@@ -47,16 +47,16 @@ public class ControlaInterface : MonoBehaviour
 		obj.SetActive(true);
 	}
 
-	public void MorteZumbiInterface()
+	public void AtualizarZumbisInterface()
 	{
-		qtdMorteZumbis++;
-		TextQtdMorteZumbis.text = "x " + qtdMorteZumbis;
+		quantidadeMorteZumbis++;
+		TextQuantidadeZumbisMortos.text = "x " + quantidadeMorteZumbis;
 	}
 
-	public void MorteZumbiInterface(int score)
+	public void AtualizarZumbisInterface(int score)
 	{
-		qtdMorteZumbis += score;
-		TextQtdMorteZumbis.text = "x " + qtdMorteZumbis;		
+		quantidadeMorteZumbis += score;
+		TextQuantidadeZumbisMortos.text = "x " + quantidadeMorteZumbis;		
 	}
 
 	IEnumerator IncrementaValorAte(int valor, int duracao)
@@ -69,7 +69,7 @@ public class ControlaInterface : MonoBehaviour
 			relogio += Time.unscaledDeltaTime;		
 			float progresso = relogio / duracao;
 			min = (int)Mathf.Lerp(0, valor, progresso);
-			TextQtdMorteZumbisGameOver.text = min.ToString();
+			TextQuantidadeZumbisMortosGameOver.text = min.ToString();
 			yield return null;
 		}
 	}

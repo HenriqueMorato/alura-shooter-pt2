@@ -12,8 +12,10 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
     private Status status;
     private Vector3 posicaoAleatoria;
     private Vector3 direcao;
-    private float tempoDaProximaMovimentacao = 4;
+    private float tempoDaProximaMovimentacaoAleatoria = 4;
     private float contadorVagar;
+    public float PorcentagemDeGerarKitMedico = 0.1f;
+
     [HideInInspector]
     public GeradorZumbis meuGerador;
     public GameObject KitMedico;
@@ -35,7 +37,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 
 
         movimentoPersonagem.Rotacionar(direcao);
-	    animacaoPersonagem.AnimarMovimento(direcao);        
+	    animacaoPersonagem.AnimarMovimento(direcao);    
         if(distancia > status.DistanciaDeVisao)
         {
             Vagar();
@@ -61,11 +63,11 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
         {
             posicaoAleatoria = transform.position + (Random.insideUnitSphere * 10);
             posicaoAleatoria.y = 0f;
-            contadorVagar = Time.timeSinceLevelLoad + tempoDaProximaMovimentacao;
+            contadorVagar = Time.timeSinceLevelLoad + tempoDaProximaMovimentacaoAleatoria;
         }
 
-
-        if(Vector3.Distance(transform.position, posicaoAleatoria) >= 0.05f)
+        bool ficouPertoOSuficiente = Vector3.Distance(transform.position, posicaoAleatoria) >= 0.05f;
+        if(ficouPertoOSuficiente == true)
 		{
 		    direcao = posicaoAleatoria - transform.position;
             movimentoPersonagem.Movimentar(direcao.normalized, status.Velocidade);            
@@ -97,13 +99,13 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
     {
         movimentoPersonagem.CairPeloChao();
         animacaoPersonagem.Morte();
-        Destroy(gameObject, 12);
+        Destroy(gameObject, 2);
         this.enabled = false;
         meuGerador.DiminuiQtdZumbis();
         ControlaAudio.instancia.PlayOneShot(SomDaMorte);
-        ControlaInterface.instancia.MorteZumbiInterface();
+        ControlaInterface.instancia.AtualizarZumbisInterface();
 
-        if(Random.value < 0.1)
+        if(Random.value < PorcentagemDeGerarKitMedico)
         {
             Instantiate(KitMedico, transform.position, Quaternion.identity);
         }
