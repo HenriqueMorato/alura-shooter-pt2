@@ -40,7 +40,9 @@ public class ControlaChefe : MonoBehaviour, IMatavel
 
 		if(!agente.pathPending)
 		{
-			if(agente.remainingDistance <= agente.stoppingDistance)
+			bool estouPertoDoJogador = agente.remainingDistance <= agente.stoppingDistance;
+			
+			if(estouPertoDoJogador == true)
 			{
 				animacaoChefe.Atacar(true);
 				Vector3 direcao = jogador.position - transform.position;
