@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(MovimentoPersonagem))]
 [RequireComponent(typeof(Status))]
-public class ControlaInimigo : MonoBehaviour {
+public class ControlaInimigo : MonoBehaviour, IMatavel {
 
     private GameObject Jogador;
     private MovimentoPersonagem movimentoPersonagem;
@@ -77,7 +77,22 @@ public class ControlaInimigo : MonoBehaviour {
         Jogador.GetComponent<ControlaJogador>().TomarDano(Random.Range(25,40));
     }
 
-    public void MorteZumbi()
+    void AleatorizaTipoZumbi ()
+    {
+        int geraTipoZumbi = Random.Range(1, transform.childCount);
+        transform.GetChild(geraTipoZumbi).gameObject.SetActive(true);
+    }
+
+    public void TomarDano(int _dano)
+    {
+        status.Vida -= _dano;
+        if(status.Vida <= 0)
+        {
+            Morrer();
+        }
+    }
+
+    public void Morrer()
     {
         movimentoPersonagem.CairPeloChao();
         animacaoPersonagem.Morte();
@@ -93,11 +108,5 @@ public class ControlaInimigo : MonoBehaviour {
             GameObject kitMedico = Instantiate(KitMedico, transform.position, Quaternion.identity) as GameObject;
             Destroy(kitMedico, 5);
         }
-    }
-
-    void AleatorizaTipoZumbi ()
-    {
-        int geraTipoZumbi = Random.Range(1, transform.childCount);
-        transform.GetChild(geraTipoZumbi).gameObject.SetActive(true);
     }
 }

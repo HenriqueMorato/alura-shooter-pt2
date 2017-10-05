@@ -15053,7 +15053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChefePrefab: {fileID: 1273617878361490, guid: f1c21340a32ad4ad8a41f81f76173454,
     type: 2}
-  TempoGerarBoss: 40
+  TempoGerarBoss: 60
 --- !u!4 &2066453637
 Transform:
   m_ObjectHideFlags: 0

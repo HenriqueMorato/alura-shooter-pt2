@@ -1373,7 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17fb743c5a346e59b6a657e40a08ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VidaInicial: 100
+  VidaInicial: 1
   Vida: 100
   Velocidade: 5
   DistanciaDeVisao: 15

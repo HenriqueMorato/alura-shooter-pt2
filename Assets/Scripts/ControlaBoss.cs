@@ -5,7 +5,7 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class ControlaBoss : MonoBehaviour 
+public class ControlaBoss : MonoBehaviour, IMatavel 
 {
 	private NavMeshAgent agente;
 	private Transform jogador;
@@ -64,13 +64,20 @@ public class ControlaBoss : MonoBehaviour
 		AtualizarInterface();
 		if(status.Vida <= 0)
 		{
-			MorteChefe();
+			Morrer();
 		}
 	}
 
-	void MorteChefe ()
+	void AtualizarInterface ()
 	{
-		movimentoPersonagem.CairPeloChao();
+		sliderVidaChefe.value = status.Vida;
+
+		SliderImagem.color = Color.Lerp(CorVidaMinima, CorVidaMaxima, status.Vida / status.VidaInicial);
+	}
+
+    public void Morrer()
+    {
+        movimentoPersonagem.CairPeloChao();
         animacaoPersonagem.Morte();
         Destroy(gameObject, 2);
         movimentoPersonagem.enabled = false;
@@ -81,12 +88,5 @@ public class ControlaBoss : MonoBehaviour
 
         GameObject kitMedico = Instantiate(KitMedicoPrefab, transform.position, Quaternion.identity) as GameObject;
         Destroy(kitMedico, 5);
-	}
-
-	void AtualizarInterface ()
-	{
-		sliderVidaChefe.value = status.Vida;
-
-		SliderImagem.color = Color.Lerp(CorVidaMinima, CorVidaMaxima, status.Vida / status.VidaInicial);
-	}
+    }
 }

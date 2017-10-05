@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bala : MonoBehaviour {
 
     public float Velocidade = 20;
+    public int Dano = 10;
     private Rigidbody rigidbodyBala;
 	public GameObject SangueZumbi;
 
@@ -22,17 +23,18 @@ public class Bala : MonoBehaviour {
 
     void OnTriggerEnter(Collider objetoDeColisao)
     {
-        if(objetoDeColisao.tag == Tags.Inimigo)
+        switch (objetoDeColisao.tag)
         {
-            objetoDeColisao.GetComponent<ControlaInimigo>().MorteZumbi();
-			GameObject particula = Instantiate(SangueZumbi, transform.position, objetoDeColisao.transform.rotation);
-			Destroy(particula, 1f);
+            case Tags.Inimigo:
+                objetoDeColisao.GetComponent<ControlaInimigo>().TomarDano(Dano);   
+			    Instantiate(SangueZumbi, transform.position, objetoDeColisao.transform.rotation);                             
+            break;
+            case Tags.Chefe:
+                objetoDeColisao.GetComponent<ControlaBoss>().TomarDano(Dano);
+			    Instantiate(SangueZumbi, transform.position, objetoDeColisao.transform.rotation);                                            
+            break;
         }
-        else if(objetoDeColisao.tag == Tags.Chefe)
-        {
-            objetoDeColisao.GetComponent<ControlaBoss>().TomarDano(10);
-        }
-
+        
         Destroy(gameObject);
     }
 }

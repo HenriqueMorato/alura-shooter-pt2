@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MovimentoJogador))]
-public class ControlaJogador : MonoBehaviour
+public class ControlaJogador : MonoBehaviour, IMatavel
 {
     private Vector3 direcao;
     public LayerMask MascaraChao;
@@ -47,7 +47,7 @@ public class ControlaJogador : MonoBehaviour
         ControlaInterface.instancia.AtualizaSliderVidaJogador();
         if(status.Vida <= 0)
         {
-            ControlaInterface.instancia.GameOver();
+            Morrer();
         }
     }
 
@@ -59,5 +59,10 @@ public class ControlaJogador : MonoBehaviour
             status.Vida = status.VidaInicial;
         }
         ControlaInterface.instancia.AtualizaSliderVidaJogador();        
+    }
+
+    public void Morrer()
+    {
+        ControlaInterface.instancia.GameOver();
     }
 }

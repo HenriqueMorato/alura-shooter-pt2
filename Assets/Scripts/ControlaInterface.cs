@@ -15,13 +15,16 @@ public class ControlaInterface : MonoBehaviour
 	public Text TextQtdMorteZumbisGameOver;
 	public Text TextChefeAparece;
 
+	void Awake ()
+	{
+		instancia = this;		
+	}
 	void Start()
 	{
 		controlaJogador = GameObject.FindObjectOfType(typeof(ControlaJogador)) as ControlaJogador;
 
 		sliderVidaJogador.maxValue = controlaJogador.status.Vida;
 
-		instancia = this;
 		Time.timeScale = 1;
 	}
 
