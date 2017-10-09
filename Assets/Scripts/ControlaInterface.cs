@@ -24,6 +24,7 @@ public class ControlaInterface : MonoBehaviour
 		controlaJogador = GameObject.FindObjectOfType(typeof(ControlaJogador)) as ControlaJogador;
 
 		sliderVidaJogador.maxValue = controlaJogador.status.Vida;
+		AtualizaSliderVidaJogador ();
 
 		Time.timeScale = 1;
 	}
@@ -36,7 +37,11 @@ public class ControlaInterface : MonoBehaviour
 	public void GameOver ()
 	{
 		Time.timeScale = 0;
-		TextTempoSobrevivencia.text = "Você sobreviveu " + Mathf.Floor(Time.timeSinceLevelLoad/60) + " min e " + Mathf.Floor(Time.timeSinceLevelLoad%60) + " segundos";
+		int minutos = (int)Mathf.Floor(Time.timeSinceLevelLoad / 60);
+		int segundos = (int)Mathf.Floor(Time.timeSinceLevelLoad % 60);		
+		string textoTempoSobrevivencia = string.Format("Você sobreviveu por {0}min e {1}s", minutos, segundos);
+		
+		TextTempoSobrevivencia.text = textoTempoSobrevivencia;
 		StartCoroutine(MostrarObjeto(GameOverPanel, 1));
 		StartCoroutine(IncrementaValorAte(quantidadeMorteZumbis, 2));				
 	}

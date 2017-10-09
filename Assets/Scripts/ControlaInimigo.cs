@@ -76,7 +76,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
 
     void BateNoJogador ()
     {
-        int dano = Random.Range(25,40);
+        int dano = Random.Range(25,30);
         Jogador.GetComponent<ControlaJogador>().TomarDano(dano);
     }
 
