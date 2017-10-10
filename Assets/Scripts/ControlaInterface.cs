@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class ControlaInterface : MonoBehaviour 
 {
 	public Slider sliderVidaJogador;
-	private ControlaJogador controlaJogador;
+	private Status statusJogador;
 	public static ControlaInterface instancia;
 	public GameObject GameOverPanel;
 	public Text TextTempoSobrevivencia;
-	private int quantidadeMorteZumbis = 0;
+	private int quantidadeZumbisMortos = 0;
 	public Text TextQuantidadeZumbisMortos;
 	public Text TextQuantidadeZumbisMortosGameOver;
 	public Text TextChefeAparece;
@@ -21,9 +21,9 @@ public class ControlaInterface : MonoBehaviour
 	}
 	void Start()
 	{
-		controlaJogador = GameObject.FindObjectOfType(typeof(ControlaJogador)) as ControlaJogador;
+		statusJogador = GameObject.FindWithTag(Tags.Jogador).GetComponent<Status>();
 
-		sliderVidaJogador.maxValue = controlaJogador.status.Vida;
+		sliderVidaJogador.maxValue = statusJogador.Vida;
 		AtualizaSliderVidaJogador ();
 
 		Time.timeScale = 1;
@@ -31,19 +31,19 @@ public class ControlaInterface : MonoBehaviour
 
 	public void AtualizaSliderVidaJogador ()
 	{
-		sliderVidaJogador.value = controlaJogador.status.Vida;
+		sliderVidaJogador.value = statusJogador.Vida;
 	}
 
 	public void GameOver ()
 	{
 		Time.timeScale = 0;
-		int minutos = (int)Mathf.Floor(Time.timeSinceLevelLoad / 60);
-		int segundos = (int)Mathf.Floor(Time.timeSinceLevelLoad % 60);		
+		int minutos = (int)(Time.timeSinceLevelLoad / 60);
+		int segundos = (int)(Time.timeSinceLevelLoad % 60);		
 		string textoTempoSobrevivencia = string.Format("Você sobreviveu por {0}min e {1}s", minutos, segundos);
 		
 		TextTempoSobrevivencia.text = textoTempoSobrevivencia;
 		StartCoroutine(MostrarObjeto(GameOverPanel, 1));
-		StartCoroutine(IncrementaValorAte(quantidadeMorteZumbis, 2));				
+		StartCoroutine(IncrementaValorAte(quantidadeZumbisMortos, 2));				
 	}
 
 	IEnumerator MostrarObjeto(GameObject obj, float tempo)
@@ -54,14 +54,14 @@ public class ControlaInterface : MonoBehaviour
 
 	public void AtualizarZumbisInterface()
 	{
-		quantidadeMorteZumbis++;
-		TextQuantidadeZumbisMortos.text = "x " + quantidadeMorteZumbis;
+		quantidadeZumbisMortos++;
+		TextQuantidadeZumbisMortos.text = "x " + quantidadeZumbisMortos;
 	}
 
 	public void AtualizarZumbisInterface(int score)
 	{
-		quantidadeMorteZumbis += score;
-		TextQuantidadeZumbisMortos.text = "x " + quantidadeMorteZumbis;		
+		quantidadeZumbisMortos += score;
+		TextQuantidadeZumbisMortos.text = "x " + quantidadeZumbisMortos;		
 	}
 
 	IEnumerator IncrementaValorAte(int valor, int duracao)

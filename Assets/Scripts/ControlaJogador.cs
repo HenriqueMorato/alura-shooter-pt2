@@ -10,8 +10,7 @@ public class ControlaJogador : MonoBehaviour, IMatavel
     public GameObject TextoGameOver;
     private AnimacaoPersonagem animacaoJogador;
     private MovimentoJogador movimentoJogador;
-    [HideInInspector]
-    public Status status;
+    private Status status;
     public AudioClip SomDeDano;
 
     private void Start()

@@ -61,17 +61,26 @@ public class ControlaInimigo : MonoBehaviour, IMatavel {
         
         if(Time.timeSinceLevelLoad > contadorVagar)
         {
-            posicaoAleatoria = transform.position + (Random.insideUnitSphere * 10);
-            posicaoAleatoria.y = 0f;
-            contadorVagar = Time.timeSinceLevelLoad + tempoDaProximaMovimentacaoAleatoria;
+            posicaoAleatoria = AleatorizarPosicao();
+            float tempoAleatorio = Random.Range(-1f, 1f);
+            contadorVagar = Time.timeSinceLevelLoad + tempoDaProximaMovimentacaoAleatoria + tempoAleatorio;
         }
 
-        bool ficouPertoOSuficiente = Vector3.Distance(transform.position, posicaoAleatoria) >= 0.05f;
-        if(ficouPertoOSuficiente == true)
+        bool ficouPertoOSuficiente = Vector3.Distance(transform.position, posicaoAleatoria) <= 0.05f;
+        if(ficouPertoOSuficiente == false)
 		{
 		    direcao = posicaoAleatoria - transform.position;
             movimentoPersonagem.Movimentar(direcao.normalized, status.Velocidade);            
 		}
+    }
+
+    Vector3 AleatorizarPosicao ()
+    {
+        Vector3 posicao = Random.insideUnitSphere * 10;
+        posicao += transform.position;
+        posicao.y = 0;
+
+        return posicao;
     }
 
     void BateNoJogador ()
