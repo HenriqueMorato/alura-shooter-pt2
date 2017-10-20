@@ -18,9 +18,9 @@ public class GeradorChefe : MonoBehaviour
 	{
 		if(Time.timeSinceLevelLoad > contadorTempo)
 		{
-			contadorTempo = Time.timeSinceLevelLoad + TempoGerarBoss;
 			Instantiate(ChefePrefab, transform.position, transform.rotation);
 			ControlaInterface.instancia.TextoChefeAparece();
+			contadorTempo = Time.timeSinceLevelLoad + TempoGerarBoss;
 		}
 	}
 }

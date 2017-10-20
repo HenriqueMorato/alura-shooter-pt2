@@ -14,6 +14,7 @@ public class ControlaInterface : MonoBehaviour
 	public Text TextQuantidadeZumbisMortos;
 	public Text TextQuantidadeZumbisMortosGameOver;
 	public Text TextChefeAparece;
+	public Text TextPontuacaoMaxima;
 
 	void Awake ()
 	{
@@ -27,6 +28,7 @@ public class ControlaInterface : MonoBehaviour
 		AtualizaSliderVidaJogador ();
 
 		Time.timeScale = 1;
+		AjustarPontuacaoMaxima();
 	}
 
 	public void AtualizaSliderVidaJogador ()
@@ -38,13 +40,32 @@ public class ControlaInterface : MonoBehaviour
 	{
 		Time.timeScale = 0;
 		int minutos = (int)(Time.timeSinceLevelLoad / 60);
-		int segundos = (int)(Time.timeSinceLevelLoad % 60);		
+		int segundos = (int)(Time.timeSinceLevelLoad % 60);	
+		AjustarPontuacaoMaxima();
 		string textoTempoSobrevivencia = string.Format("Você sobreviveu por {0}min e {1}s", minutos, segundos);
 		
 		TextTempoSobrevivencia.text = textoTempoSobrevivencia;
 		StartCoroutine(MostrarObjeto(GameOverPanel, 1));
 		StartCoroutine(IncrementaValorAte(quantidadeZumbisMortos, 2));				
 	}
+
+	void AjustarPontuacaoMaxima ()
+	{
+		float tempoSalvo = PlayerPrefs.GetFloat("PontuacaoMaxima");
+		if(tempoSalvo < Time.timeSinceLevelLoad)
+		{
+			int minutos = (int)(Time.timeSinceLevelLoad / 60);
+			int segundos = (int)(Time.timeSinceLevelLoad % 60);	
+			TextPontuacaoMaxima.text = string.Format("Seu melhor tempo é {0}min e {1}s", minutos, segundos);
+			PlayerPrefs.SetFloat("PontuacaoMaxima", Time.timeSinceLevelLoad);
+		}
+		if(TextPontuacaoMaxima.text == "")
+		{
+			int minutos = (int)(tempoSalvo / 60);
+			int segundos = (int)(tempoSalvo % 60);	
+			TextPontuacaoMaxima.text = string.Format("Seu melhor tempo é {0}min e {1}s", minutos, segundos);
+		}
+	} 
 
 	IEnumerator MostrarObjeto(GameObject obj, float tempo)
 	{

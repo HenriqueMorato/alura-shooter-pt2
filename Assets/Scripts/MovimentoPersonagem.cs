@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovimentoPersonagem : MonoBehaviour {
 
-	protected Rigidbody rigidbodyJogador;
-    protected void Awake()
+	private Rigidbody rigidbodyJogador;
+    void Awake()
     {
         rigidbodyJogador = GetComponent<Rigidbody>();
     }

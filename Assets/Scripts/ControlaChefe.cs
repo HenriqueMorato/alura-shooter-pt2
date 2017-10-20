@@ -38,7 +38,7 @@ public class ControlaChefe : MonoBehaviour, IMatavel
 		agente.destination = jogador.position;
 		animacaoChefe.AnimarMovimento(agente.velocity);
 
-		if(!agente.pathPending)
+		if(!agente.pathPending == false)
 		{
 			bool estouPertoDoJogador = agente.remainingDistance <= agente.stoppingDistance;
 			

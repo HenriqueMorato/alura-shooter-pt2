@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ControlaAudio : MonoBehaviour {
 
-	public AudioSource audioSource;
+	private AudioSource MeuAudioSource;
 	public static AudioSource instancia;
 
 	void Awake()
 	{
-		instancia = audioSource;
+		MeuAudioSource = GetComponent<AudioSource>();
+		instancia = MeuAudioSource;
 	}
 }

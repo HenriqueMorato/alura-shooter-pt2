@@ -6203,7 +6203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1320272341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7485,7 +7485,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   TextoGameOver: {fileID: 0}
-  status: {fileID: 0}
   SomDeDano: {fileID: 0}
 --- !u!114 &1665214591
 MonoBehaviour:
